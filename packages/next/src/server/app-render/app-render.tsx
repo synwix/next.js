@@ -719,6 +719,10 @@ async function renderToHTMLOrFlightImpl(
 
   ComponentMod.patchFetch()
 
+  if (renderOpts.experimental.after) {
+    ComponentMod.patchCacheScopeSupportIntoReact()
+  }
+
   /**
    * Rules of Static & Dynamic HTML:
    *
