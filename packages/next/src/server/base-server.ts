@@ -138,7 +138,6 @@ import type { DeepReadonly } from '../shared/lib/deep-readonly'
 import { isNodeNextRequest, isNodeNextResponse } from './base-http/helpers'
 import { patchSetHeaderWithCookieSupport } from './lib/patch-set-header'
 import { getBuiltinWaitUntil } from './after/wait-until-builtin'
-import { createStandaloneWaitUntil } from './after/wait-until-node'
 
 export type FindComponentsResult = {
   components: LoadComponentsReturnType
