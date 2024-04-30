@@ -1431,7 +1431,7 @@ export default class NextNodeServer extends BaseServer<
     name: string
     paths: string[]
     wasm: { filePath: string; name: string }[]
-    environments: { [key: string]: string }
+    env: { [key: string]: string }
     assets?: { filePath: string; name: string }[]
   } | null {
     const manifest = this.getMiddlewareManifest()
@@ -1473,7 +1473,7 @@ export default class NextNodeServer extends BaseServer<
             filePath: join(this.distDir, binding.filePath),
           }
         }),
-      environments: pageInfo.environments,
+      env: pageInfo.env,
     }
   }
 
